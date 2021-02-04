@@ -3,3 +3,8 @@ The rake db:setup command, which in turn calls the rake db:schema:load command, 
 bin/rake routes
 
 The keyword 'raise' allows you to throw an error anywhere (good for debugging)
+
+bin/rails g migration add_dicount_cents_to_products
+
+bin/rake db:migrate
+bin/rake db:rollback
