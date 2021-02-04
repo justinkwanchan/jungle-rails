@@ -8,3 +8,14 @@ bin/rails g migration add_dicount_cents_to_products
 
 bin/rake db:migrate
 bin/rake db:rollback
+
+rails destroy controller name
+
+* Add this to top of any controller that should be secured
+before_filter :authorize
+
+<% if current_user %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
