@@ -1,14 +1,24 @@
 // Vendor
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
 
 // App
-@import "products";
+@import 'products';
 
 // Global
 body {
   padding-top: 70px;
+
+  .navbar-login-info {
+    display: none;
+    padding: 10px 15px;
+
+    @media (min-width: 768px) {
+      display: block;
+      padding: 15px;
+    }
+  }
 }
 
 // Bootstrap adjustments
