@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # Returns the authenticated user from the users table with matchin email and password
   # Email is case insensitive
   def self.authenticate_with_credentials(email, password)
-    user = User.where("email LIKE ?", "%#{sanitize_sql_like(email)}%")
+    user = User.where("lower(email) LIKE ?", "%#{sanitize_sql_like(email.strip.downcase)}%")
     user.any? ? user[0].authenticate(password) : nil
   end
 end
