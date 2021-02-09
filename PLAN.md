@@ -1,5 +1,10 @@
 # Things to do
 * Must fix bug where registering and email already exists
+* Must fix bug where registering with too short password (these two cases should show error messages)
+
+### Removed:
+* scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }
+    user = User.ci_find('email', email.strip)
 
 The rake db:setup command, which in turn calls the rake db:schema:load command, uses this schema file to create the structure of our database from scratch. This is more efficient and reliable than running all the migrations from start to finish. However, database migrations are still needed for future changes to the database schema.
 
