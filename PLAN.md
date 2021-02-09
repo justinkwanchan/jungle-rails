@@ -27,3 +27,6 @@ before_filter :authorize
 <% else %>
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
+
+
+save_screenshot('Test_1.png')
