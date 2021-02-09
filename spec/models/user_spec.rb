@@ -127,4 +127,52 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    context 'given a proper login' do
+      it 'will successfully return the appropriate user information' do
+        @user_register = User.create(
+          first_name: 'Spongebob',
+          last_name: 'Squarepants',
+          email: 'sponge.bob@squarepants.com',
+          password: 'crabby#patty',
+          password_confirmation: 'crabby#patty',
+        )
+
+        @user_login = User.authenticate_with_credentials('sponge.bob@squarepants.com', 'crabby#patty')
+        expect(@user_login).to eq(@user_register)
+      end
+    end
+    
+    context 'given a login with spaces around email' do
+      it 'will successfully return the appropriate user information' do
+        @user_register = User.create(
+          first_name: 'Spongebob',
+          last_name: 'Squarepants',
+          email: 'sponge.bob@squarepants.com',
+          password: 'crabby#patty',
+          password_confirmation: 'crabby#patty',
+        )
+
+        @user_login = User.authenticate_with_credentials('  sponge.bob@squarepants.com  ', 'crabby#patty')
+        expect(@user_login).to eq(@user_register)
+      end
+    end
+    
+    context 'given a login with with email having non-matching case' do
+      it 'will successfully return the appropriate user information' do
+        @user_register = User.create(
+          first_name: 'Spongebob',
+          last_name: 'Squarepants',
+          email: 'Sponge.bob@Squarepants.com',
+          password: 'crabby#patty',
+          password_confirmation: 'crabby#patty',
+        )
+
+        @user_login = User.authenticate_with_credentials('spOnge.bOb@squarepants.com', 'crabby#patty')
+        
+        expect(@user_login).to eq(@user_register)
+      end
+    end
+  end
 end
