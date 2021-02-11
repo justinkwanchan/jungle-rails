@@ -8,9 +8,9 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
-| !["The landing page for the app"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmemain.png?raw=true) | !["The form for adding an appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmeadd.png?raw=true) |
+| !["The landing page for the app"](https://github.com/justinkwanchan/jungle-rails/blob/master/public/images/Main.png?raw=true) | !["The product detail page"](https://github.com/justinkwanchan/jungle-rails/blob/master/public/images/Product.png?raw=true) |
 | ------------- |:-------------:|
-| !["The added appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmeshow.png?raw=true) | !["Deleting an appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmedelete.png?raw=true) |
+| !["The user's shopping cart"](https://github.com/justinkwanchan/jungle-rails/blob/master/public/images/Cart.png?raw=true) | !["Adding a new product as admin"](https://github.com/justinkwanchan/jungle-rails/blob/master/public/images/Admin.png?raw=true) |
 
 ## Setup
 
