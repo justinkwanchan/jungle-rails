@@ -1,7 +1,16 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. The landing page shows the store's inventory of products, whereby users can click to see a product's details or add a product to their cart. Products may also be viewed by their specific category. Following addition to their cart, users can then "pay" for their order using the implemented Stripe testing.
 
+## Additional Features
+* User registration and login
+* Admin access to add/delete products and categories
+
+## Final Product
+
+| !["The landing page for the app"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmemain.png?raw=true) | !["The form for adding an appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmeadd.png?raw=true) |
+| ------------- |:-------------:|
+| !["The added appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmeshow.png?raw=true) | !["Deleting an appointment"](https://github.com/justinkwanchan/scheduler/blob/master/public/images/readmedelete.png?raw=true) |
 
 ## Setup
 
